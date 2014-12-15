@@ -1,17 +1,29 @@
 {
-    "title": "sosotop",
-    "font_icon": "sosotop",
-    "html": "<div class=\"sosotop\"></div>",
+    "title": "gotop",
+    "font_icon": "&#gotop;",
+    "html": "<div class=\"sosotop {{eclass}}\"  {{_progdata_}}>{{content}}</div>",
     "data_config": {
+        "content": {
+            "type": "string",
+            "default": "<div href=\"javascript:;\" class=\"btn-backtotop\"><div class=\"arrow\"></div><div class=\"stick\"></div></div>"
+        },
+        "eclass":{
+            "type": "string",
+            "defult": ""
+        }
     },
     "widgets": {
-        "style": [],
+        "style": [
+        ],
         "property": [
             {
-                "label": "我的名字",
-                "type": "text",
-                "opt": {},
-                "data_name": "title"
+                "label": "",
+                "type": "richtext",
+                "opt": {
+                    "name":"richtext",
+                    "class": "mod-text"
+                },
+                "data_name":"richtext"
             }
         ]
     }
