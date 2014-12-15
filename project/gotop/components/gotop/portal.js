@@ -5,6 +5,7 @@ define(['jquery'], function ($) {
         //输出到发布页面，当用户正式发布后，调用此函数创建视图。
         onAfterRender: function (el) {
             $(el).find('.helloworld').html('helloworld');
+            alert(1);
         }
     }
 });

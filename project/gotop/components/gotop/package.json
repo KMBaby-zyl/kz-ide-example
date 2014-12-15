@@ -1,0 +1,18 @@
+{
+    "title": "sosotop",
+    "font_icon": "sosotop",
+    "html": "<div class=\"sosotop\"></div>",
+    "data_config": {
+    },
+    "widgets": {
+        "style": [],
+        "property": [
+            {
+                "label": "我的名字",
+                "type": "text",
+                "opt": {},
+                "data_name": "title"
+            }
+        ]
+    }
+}
