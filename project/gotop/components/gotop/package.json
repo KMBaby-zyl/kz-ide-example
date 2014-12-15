@@ -17,13 +17,22 @@
         ],
         "property": [
             {
-                "label": "",
-                "type": "richtext",
+                "label": "按钮样式",
+                "type": "typeselect",
                 "opt": {
-                    "name":"richtext",
-                    "class": "mod-text"
+                    "name": "eclass",
+                    "options": [
+                        {
+                            "value": "",
+                            "content": "普通"
+                        },
+                        {
+                            "value": "sosorocket",
+                            "content": "火箭"
+                        }
+                    ]
                 },
-                "data_name":"richtext"
+                "data_name": "eclass"
             }
         ]
     }

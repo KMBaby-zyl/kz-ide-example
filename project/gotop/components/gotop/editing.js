@@ -45,7 +45,7 @@ define(["jquery", "component", 'lib/mustache', 'utils/uiHelper'], function ($, C
 </g> \
 </g> \
 </svg>';
-
+var pthtml = '<div href=\"javascript:;\" class=\"btn-backtotop\"><div class=\"arrow\"></div><div class=\"stick\"></div></div>';
         return Component.extend({
             "html_edit": '<div class="sosotop edit-sosotop"><div class="btn-backtotop"> \
                 <div class="arrow"></div> \
@@ -64,6 +64,14 @@ define(["jquery", "component", 'lib/mustache', 'utils/uiHelper'], function ($, C
                 var that = this;
                 uiHelper.createConfiguartor(this);
 
+                this.listen("eclass",function(e,v){
+                    that.data["eclass"] = v;
+                    if(v =='sosorocket'){
+                        that.data['content'] = rockethtml;
+                    }else{
+                        that.data['content'] = pthtml;
+                    }
+                });
 
             },
 
@@ -71,9 +79,13 @@ define(["jquery", "component", 'lib/mustache', 'utils/uiHelper'], function ($, C
                 this.$viewEl.html(mustache.render(this.html_edit,{}));
             },
 
+            listen: function (name, fn) {
+
+                this.$configEl.delegate('[name="' + name + '"] ', 'change', fn);
+                return this;
+            },
+
             isValid: function(){
-                this.data['content'] = rockethtml;
-                this.data['eclass'] = "sosorocket";
                 return true;
             }
         });
